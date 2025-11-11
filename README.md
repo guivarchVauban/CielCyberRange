@@ -88,3 +88,4 @@ OPNsense disposera de **5 interfaces virtuelles** (vtnet0 → vtnet4), chacune m
 - [Installer Wazuh avec Docker](https://documentation.wazuh.com/current/deployment-options/docker/wazuh-container.html) 
    - Attention suivre la procédure **Single node stack deployement**
 - [Installer GLPI avec Docker](https://github.com/guivarchVauban/glpi_docker)
+- [Installer FreePbx](https://github.com/guivarchVauban/CielCyberRange/blob/main/Installation%20Debian%20et%20FreePBX.md)

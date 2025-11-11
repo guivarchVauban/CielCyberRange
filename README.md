@@ -1,5 +1,8 @@
 # TP Cyberange - Architecture Proxmox + OPNsense + Docker + FreePBX
 
+## Compte-rendu
+Toutes les étapes de configuration (adresses IP attribuées, VLAN et ports du switch, identifiants et mots de passe créés, règles firewall, paramètres Docker, etc.) doivent être consignées précisément dans un fichier COMPTE_RENDU.md et déposées sur le serveur GitLab de la section. Ce compte rendu doit être à jour, complet et permettre à un autre groupe de reproduire intégralement votre installation.
+
 ## Objectif
 Mettre en place une architecture réseau réaliste comprenant :
 - Un routeur/firewall **OPNsense** avec gestion des VLANs

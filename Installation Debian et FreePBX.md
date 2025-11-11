@@ -78,15 +78,11 @@ Ce guide explique comment créer et configurer une machine virtuelle Debian avec
 
 1. Télécharger le script d’installation de FreePBX :
    ```bash
-   cd /usr/src
-   sudo wget http://mirror.freepbx.org/modules/packages/freepbx/freepbx-16.0-latest.tgz
-   sudo tar xfz freepbx-16.0-latest.tgz
-   cd freepbx
+   sudo wget https://github.com/FreePBX/sng_freepbx_debian_install/raw/master/sng_freepbx_debian_install.sh -O /tmp/sng_freepbx_debian_install.sh
    ```
-2. Installer les dépendances :
+2. Executer le script :
    ```bash
-   sudo ./start_asterisk start
-   sudo ./install -n
+   bash /tmp/sng_freepbx_debian_install.sh
    ```
 3. Configurer FreePBX via le navigateur :
    - URL : `http://IP_DE_LA_VM`

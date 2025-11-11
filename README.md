@@ -27,7 +27,7 @@ Mettre en place une architecture réseau réaliste comprenant :
 
 | VM | Rôle | vCPU | RAM | Disque | Notes |
 |----|------|------|-----|--------|------|
-| **OPNsense** | Firewall + Routage inter-VLANs | 2 vCPU | **2 Go** | 10 Go | Interfaces virtuelles vtnet0..vtnet4 |
+| **OPNsense** | Firewall + Routage inter-VLANs | 2 vCPU | **2 Go** | 50 Go | Interfaces virtuelles vtnet0..vtnet4 |
 | **Debian + FreePBX** | Téléphonie IP (Asterisk/FreePBX) | 2 vCPU | **3 Go** | 20 Go | Interface sur VLAN 30 (VoIP) |
 | **Debian Docker Host** | GLPI + Wazuh + Portainer | 4 vCPU | **8 Go** | 100 Go | Interface sur VLAN 10 (Administration) et VLAN 20 (Clients) |
 | **Poste Admin Kali (optionnel)** | Admin / Prof | 1 vCPU | **1 Go** | 10 Go | Interface sur VLAN 1 (WAN/Admin) ou VLAN 10 |
@@ -86,10 +86,11 @@ OPNsense disposera de **5 interfaces virtuelles** (vtnet0 → vtnet4), chacune m
 ---
 
 ## Liens utiles :
+- [Installer Debian Serveur + Docker + Portainer](https://github.com/guivarchVauban/CielCyberRange/blob/main/Installation%20Debian%20Server%20%2B%20Docker%20%2B%20Portainer.md)
 - [Installer Wazuh avec Docker](https://documentation.wazuh.com/current/deployment-options/docker/wazuh-container.html) 
    - Attention suivre la procédure **Single node stack deployement**
-- [Installer GLPI avec Docker] (https://github.com/guivarchVauban/glpi_docker)
-- Template de configuration OPNsense avec interfaces assignées (ou procédure pas-à-pas)
+- [Installer GLPI avec Docker](https://github.com/guivarchVauban/glpi_docker)
+- 
 - Checklist de validation (ping inter-VLAN, accès Web FreePBX depuis VLAN 1, accès Portainer)
 
 ---

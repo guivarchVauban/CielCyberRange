@@ -76,13 +76,7 @@ OPNsense disposera de **5 interfaces virtuelles** (vtnet0 → vtnet4), chacune m
 ## Règles réseau essentielles à créer dans OPNsense
 - **Par défaut** : DENY all entre VLANs.
 - Autoriser NAT sortant pour VLANs vers WAN (vtnet0)
-- Si site web en DMZ : configurer NAT/port forwarding depuis WAN→DMZ (ports 80/443)
-
----
-
-## Notes pédagogiques
-- Pour la VM Docker, installer Debian Server sans GUI et installer Portainer pour faciliter l'administration.
-
+- Pour le site web en DMZ : configurer NAT/port forwarding depuis WAN→DMZ (ports 80/443)
 ---
 
 ## Liens utiles :

@@ -86,13 +86,8 @@ OPNsense disposera de **5 interfaces virtuelles** (vtnet0 → vtnet4), chacune m
 ---
 
 ## Liens utiles :
+- [Installer et configurer OPNsense sur Proxmox](https://github.com/guivarchVauban/CielCyberRange/blob/main/Installation%20et%20configuration%20de%20OPNsense.md)
 - [Installer Debian Serveur + Docker + Portainer](https://github.com/guivarchVauban/CielCyberRange/blob/main/Installation%20Debian%20Server%20%2B%20Docker%20%2B%20Portainer.md)
 - [Installer Wazuh avec Docker](https://documentation.wazuh.com/current/deployment-options/docker/wazuh-container.html) 
    - Attention suivre la procédure **Single node stack deployement**
 - [Installer GLPI avec Docker](https://github.com/guivarchVauban/glpi_docker)
-- 
-- Checklist de validation (ping inter-VLAN, accès Web FreePBX depuis VLAN 1, accès Portainer)
-
----
-
-Fichier créé : `/mnt/data/tp_cyberange_proxmox.md`

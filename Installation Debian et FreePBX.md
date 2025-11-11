@@ -69,7 +69,7 @@ Ce guide explique comment créer et configurer une machine virtuelle Debian avec
    ```
 2. Installer les paquets nécessaires :
    ```bash
-   sudo apt install -y wget curl gnupg2 lsb-release sudo
+   sudo apt install -y wget
    ```
 
 ---

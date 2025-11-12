@@ -24,7 +24,7 @@ Installer OPNsense comme routeur/firewall pour gérer plusieurs VLANs et fournir
 
 | Paramètre | Valeur |
 |---|---|
-| OS | Other / FreeBSD |
+| OS | Other |
 | CPU | 2 |
 | RAM | 2 Go |
 | Disque | 50 Go |

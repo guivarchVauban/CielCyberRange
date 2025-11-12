@@ -70,7 +70,7 @@ OPNsense disposera de **5 interfaces virtuelles** (vtnet0 → vtnet4), chacune m
    - Répéter avec VLAN Tag `10`, `20`, `30`, `40` pour les autres netX
 
 3. **Ajouter interfaces aux autres VMs** :
-   - Docker Host: Bridge `vmbr0`, VLAN Tag `10`
+   - Docker Host: Bridge `vmbr0`, VLAN Tag `20` et VLAN Tag `30`
    - FreePBX VM: Bridge `vmbr0`, VLAN Tag `30`
    - Poste Admin: Bridge `vmbr0`, VLAN Tag `1` (si tu veux accéder à Proxmox via VLAN1)
 

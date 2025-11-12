@@ -31,7 +31,7 @@ Mettre en place une architecture réseau réaliste comprenant :
 | VM | Rôle | vCPU | RAM | Disque | Notes |
 |----|------|------|-----|--------|------|
 | **OPNsense** | Firewall + Routage inter-VLANs | 2 vCPU | **2 Go** | 50 Go | Interfaces virtuelles vtnet0..vtnet4 |
-| **Debian + FreePBX** | Téléphonie IP (Asterisk/FreePBX) | 2 vCPU | **3 Go** | 20 Go | Interface sur VLAN 30 (VoIP) |
+| **Debian + FreePBX** | Téléphonie IP (Asterisk/FreePBX) | 2 vCPU | **3 Go** | 20 Go | Interface sur VLAN 30 (VoIP)  et sur VLAN20 |
 | **Debian Docker Host** | GLPI + Wazuh + Portainer | 4 vCPU | **8 Go** | 100 Go | Interface sur VLAN 10 (Administration) et VLAN 20 (Clients) |
 | **Poste Admin Kali (optionnel)** | Admin / Prof | 1 vCPU | **1 Go** | 10 Go | Interface sur VLAN 1 (WAN/Admin) ou VLAN 10 |
 

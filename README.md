@@ -45,10 +45,10 @@ OPNsense disposera de **5 interfaces virtuelles** (vtnet0 → vtnet4), chacune m
 | Interface OPNsense | VM Interface (Proxmox) | VLAN Tag sur vmbr0 | Rôle |
 |--------------------|-------------------------|--------------------:|------|
 | `vtnet0` | net0 | **1** | WAN (accès depuis réseau pédagogique / accès Proxmox) |
-| `vtnet1` | net1 | **10** | Administration (gestion serveurs) |
+| `vtnet1` | net1 | **10** | DMZ (Web public) |
 | `vtnet2` | net2 | **20** | Clients |
-| `vtnet3` | net3 | **30** | VoIP (FreePBX) |
-| `vtnet4` | net4 | **40** | DMZ (Web public) |
+| `vtnet3` | net3 | **30** |  Administration (gestion serveurs) |
+| `vtnet4` | net4 | **40** |  VoIP (FreePBX) |
 
 > Dans Proxmox, ajoute 5 *Network Device* pour la VM OPNsense : Bridge = `vmbr0`, et **VLAN Tag** = 1, 10, 20, 30, 40 respectivement.
 > À l'intérieur d'OPNsense, ces interfaces apparaîtront comme `vtnet0` à `vtnet4`. Lors du premier démarrage, affecte `vtnet0` comme WAN, puis assigne et active les autres interfaces via **Interfaces → Assignments**.

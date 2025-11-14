@@ -40,6 +40,7 @@ Taper:(attention le clavier et en Qwerty)
 | ---|---|
 |installer | opnsense |
 
+Suivre ensuite ce [tutoriel](https://www.it-connect.fr/tuto-installer-et-configurer-opnsense/) pour la suite de la démarche d'installation **Attention il faut tout de même adapter à vos besoins**
 ---
 
 ## 2) Attribution des interfaces (console OPNsense)
@@ -48,11 +49,7 @@ Quand OPNsense demande d’assigner :
 
 ```
 vtnet0 → WAN
-vtnet1 → LAN-ADMIN
-vtnet2 → LAN-CLIENTS
-vtnet3 → LAN-VOIP
-vtnet4 → DMZ
-```
+vtnet1 → LAN-DMZ
 
 Valider.
 

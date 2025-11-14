@@ -6,10 +6,10 @@ Installer OPNsense comme routeur/firewall pour gérer plusieurs VLANs et fournir
 | Interface VM | Rôle | VLAN | Adresse |
 |---|---|---|---|
 | vtnet0 | WAN | 1 | 
-| vtnet1 | Admin | 10 |
+| vtnet1 | DMZ | 10 |
 | vtnet2 | Clients | 20 |
-| vtnet3 | VoIP | 30 |
-| vtnet4 | DMZ | 40 |
+| vtnet3 | Administration | 30 |
+| vtnet4 | VOIP | 40 |
 
 
 ---
@@ -31,6 +31,13 @@ Installer OPNsense comme routeur/firewall pour gérer plusieurs VLANs et fournir
 | NICs | 5 interfaces sur vmbr0 avec tags VLAN : 1,10,20,30,40 | 
 
 **Les Interfaces seront à ajouter à la main après la création de la VM**
+
+Démarrer la VM et ouvrir une console noVNC
+Attendre le démarrage et le prompt de login (ça peut être long)
+
+Taper:(attention le clavier et en Qwerty)
+| Login | Mot de passe |
+|installer | opnsense |
 
 ---
 

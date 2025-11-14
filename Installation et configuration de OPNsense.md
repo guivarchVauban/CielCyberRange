@@ -37,6 +37,7 @@ Attendre le démarrage et le prompt de login (ça peut être long)
 
 Taper:(attention le clavier et en Qwerty)
 | Login | Mot de passe |
+| ---|---|
 |installer | opnsense |
 
 ---

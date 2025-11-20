@@ -5,6 +5,7 @@ Pour s'initier à Wazuh, vous allez configurer le FIM (File Integrity Monitoring
 ## Objectif
 
 Surveiller le dossier `C:/users/Public/` des 2 PC Clients et vérifier la remontée des informations sur le Serveur wazuh
+sous linux Surveiller le dossier `/opt/`
 
 ## Tutorial 
 

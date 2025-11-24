@@ -4,7 +4,7 @@ Surveiller les containers GLPI (mariadb et glpi) avec le Wazuh Agent qui tourne 
 
 https://documentation.wazuh.com/current/user-manual/capabilities/container-security/monitoring-docker.html
 
-** Attention vous devez vérifier la version de python installée et installer pip3 et les dépendances avant de configurer ossec.conf **
+**Attention vous devez vérifier la version de python installée et installer pip3 et les dépendances avant de configurer ossec.conf**
 
 Une fois la configuration fonctionnelle : 
 

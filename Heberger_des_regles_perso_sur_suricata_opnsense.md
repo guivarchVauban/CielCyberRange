@@ -1,4 +1,3 @@
-Règles Personnalisées via Nginx Docker
 
 Cette méthode garantit que vos règles personnalisées (custom.rules) sont téléchargées par OPNsense sans être écrasées lors des mises à jour du système.
 # Étape 1 : Préparation de la Structure et des Fichiers Hôte

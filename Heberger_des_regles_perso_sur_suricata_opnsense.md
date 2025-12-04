@@ -8,14 +8,14 @@ Sur votre machine hôte (celle qui exécute Docker) :
     Créez la structure de dossiers pour Nginx et vos règles :
     Bash
 
-    mkdir -p nginx/html/suricata
+    mkdir -p docker_nginx/html/suricata
 
     Créez le fichier de règles (custom.rules) et placez-y votre syntaxe Suricata (par exemple, la règle DHCP) :
-    /votre/chemin/docker−compose/nginx/html/suricata/custom.rules
+    docker_nginx/html/suricata/custom.rules
 
     (Optionnel) Créez un fichier index.html dans nginx/html/suricata/ pour la documentation web.
 
-Étape 2 : Création du Fichier docker-compose.yml
+# Étape 2 : Création du Fichier docker-compose.yml
 
 Créez le fichier docker-compose.yml (ou modifiez l'existant) pour démarrer un service Nginx et exposer le port 80 de l'hôte :
 YAML
@@ -38,7 +38,7 @@ services:
 (Si vous aviez GLPI ou un autre service sur le port 80, modifiez-le pour utiliser un autre port, par exemple 8080:80).
 
 Démarrez les conteneurs : docker-compose up -d.
-Étape 3 : Intégration dans OPNsense (Création du Rule Set)
+# Étape 3 : Intégration dans OPNsense (Création du Rule Set)
 
 Vous devez "dire" à OPNsense que ce nouveau serveur Nginx est une source de règles.
 
@@ -46,8 +46,8 @@ Vous devez "dire" à OPNsense que ce nouveau serveur Nginx est une source de rè
     /usr/local/opnsense/scripts/suricata/metadata/rules/custom.xml
 
     Contenu du fichier (remplacez VOTRE_IP_HOTE par l'IP de la machine Docker) :
-    XML
 
+```
     <?xml version="1.0"?>
     <ruleset documentation_url="http://VOTRE_IP_HOTE/suricata/index.html">
       <location url="http://VOTRE_IP_HOTE/suricata/" prefix="Custom"/>
@@ -55,7 +55,7 @@ Vous devez "dire" à OPNsense que ce nouveau serveur Nginx est une source de rè
         <file description="Règles locales">custom.rules</file>
       </files>
     </ruleset>
-
+```
     Télécharger et Activer dans le GUI :
 
         Naviguez vers Services → Intrusion Detection → Download.

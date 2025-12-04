@@ -37,15 +37,16 @@ services:
 
 (Si vous aviez GLPI ou un autre service sur le port 80, modifiez-le pour utiliser un autre port, par exemple 8080:80).
 
-Démarrez les conteneurs : docker-compose up -d.
+Démarrez les conteneurs : 
+    docker-compose up -d.
 # Étape 3 : Intégration dans OPNsense (Création du Rule Set)
 
 Vous devez "dire" à OPNsense que ce nouveau serveur Nginx est une source de règles.
 
-    Créer le fichier de métadonnées XML : Sur l'appliance OPNsense (via SSH/Console), créez le fichier custom.xml :
+Créer le fichier de métadonnées XML : Sur l'appliance OPNsense (via SSH/Console), créez le fichier custom.xml :
     /usr/local/opnsense/scripts/suricata/metadata/rules/custom.xml
 
-    Contenu du fichier (remplacez VOTRE_IP_HOTE par l'IP de la machine Docker) :
+Contenu du fichier (remplacez VOTRE_IP_HOTE par l'IP de la machine Docker) :
 
 ```
     <?xml version="1.0"?>
@@ -64,14 +65,12 @@ Vous devez "dire" à OPNsense que ce nouveau serveur Nginx est une source de rè
 
         Activez-le et cliquez sur Download & Update.
 
-Étape 4 : Activation sur les Interfaces LAN
+# Étape 4 : Activation sur les Interfaces LAN
 
 Enfin, assurez-vous que l'ensemble de règles est appliqué à l'interface souhaitée.
 
-    Allez à Services → Intrusion Detection → Instances.
+    Allez à Services → Intrusion Detection → Rules.
 
-    Pour chaque instance LAN (ex: em2) que vous voulez surveiller, éditez ses paramètres.
-
-    Dans la section Rule Sets, cochez et activez l'ensemble de règles Custom.
+    Dans la section Rule cochez et activez l'ensemble de règles Custom.
 
     Cliquez sur Restart le service

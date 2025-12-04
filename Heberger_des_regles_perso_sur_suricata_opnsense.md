@@ -15,7 +15,7 @@ Créez le fichier de règles (custom.rules) et placez-y votre syntaxe Suricata (
 # Étape 2 : Création du Fichier docker-compose.yml
 
 Créez le fichier docker-compose.yml (ou modifiez l'existant) pour démarrer un service Nginx et exposer le port 80 de l'hôte :
-YAML
+```
 
 version: "3.2"
 
@@ -31,7 +31,7 @@ services:
       #Mappe votre dossier hôte contenant les règles à la racine web de Nginx
       - ./html:/usr/share/nginx/html:ro
     restart: always
-
+```
 (Si vous aviez GLPI ou un autre service sur le port 80, modifiez-le pour utiliser un autre port, par exemple 8080:80).
 
 Démarrez les conteneurs : 

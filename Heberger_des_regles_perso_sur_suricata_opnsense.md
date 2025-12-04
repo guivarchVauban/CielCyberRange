@@ -20,7 +20,7 @@ YAML
 version: "3.2"
 
 services:
-  # Nouveau service Nginx pour les règles
+  #Nouveau service Nginx pour les règles
   nginx-rules:
     image: nginx:stable-alpine 
     container_name: nginx-rules
@@ -28,7 +28,7 @@ services:
     ports:
       - "80:80" # Map le port 80 de l'hôte au port 80 du conteneur
     volumes:
-      # Mappe votre dossier hôte contenant les règles à la racine web de Nginx
+      #Mappe votre dossier hôte contenant les règles à la racine web de Nginx
       - ./html:/usr/share/nginx/html:ro
     restart: always
 

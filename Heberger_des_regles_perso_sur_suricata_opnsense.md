@@ -5,12 +5,10 @@ Cette méthode garantit que vos règles personnalisées (custom.rules) sont tél
 
 Sur votre machine hôte (celle qui exécute Docker) :
 
-    Créez la structure de dossiers pour Nginx et vos règles :
-    Bash
+Créez la structure de dossiers pour Nginx et vos règles :
+        mkdir -p docker_nginx/html/suricata
 
-    mkdir -p docker_nginx/html/suricata
-
-    Créez le fichier de règles (custom.rules) et placez-y votre syntaxe Suricata (par exemple, la règle DHCP) :
+Créez le fichier de règles (custom.rules) et placez-y votre syntaxe Suricata (par exemple, la règle DHCP) :
     docker_nginx/html/suricata/custom.rules
 
     (Optionnel) Créez un fichier index.html dans nginx/html/suricata/ pour la documentation web.
@@ -32,7 +30,7 @@ services:
       - "80:80" # Map le port 80 de l'hôte au port 80 du conteneur
     volumes:
       # Mappe votre dossier hôte contenant les règles à la racine web de Nginx
-      - ./nginx/html:/usr/share/nginx/html:ro
+      - ./html:/usr/share/nginx/html:ro
     restart: always
 
 (Si vous aviez GLPI ou un autre service sur le port 80, modifiez-le pour utiliser un autre port, par exemple 8080:80).

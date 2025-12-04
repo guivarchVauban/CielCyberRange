@@ -41,7 +41,7 @@ Démarrez les conteneurs :
 Vous devez "dire" à OPNsense que ce nouveau serveur Nginx est une source de règles.
 
 Créer le fichier de métadonnées XML : Sur l'appliance OPNsense (via SSH/Console), créez le fichier custom.xml :
-    /usr/local/opnsense/scripts/suricata/metadata/rules/custom.xml
+    `/usr/local/opnsense/scripts/suricata/metadata/rules/custom.xml`
 
 Contenu du fichier (remplacez VOTRE_IP_HOTE par l'IP de la machine Docker) :
 

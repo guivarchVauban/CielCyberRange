@@ -11,7 +11,7 @@ Créez la structure de dossiers pour Nginx et vos règles :
 Créez le fichier de règles (custom.rules) et placez-y votre syntaxe Suricata (par exemple, la règle DHCP) :
     docker_nginx/html/suricata/custom.rules
 
-    (Optionnel) Créez un fichier index.html dans nginx/html/suricata/ pour la documentation web.
+    (Optionnel) Créez un fichier index.html dans html/suricata/ pour la documentation web.
 
 # Étape 2 : Création du Fichier docker-compose.yml
 
